@@ -1,4 +1,4 @@
-Feature: Login Scenarios
+Feature: Forecast for surfing
 
 
   Scenario Outline: Verify Current Forecast API with Valid data
