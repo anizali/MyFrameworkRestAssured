@@ -7,7 +7,9 @@ public class Hooks {
 
     @Before
     public void initialise() {
-        System.out.println("Initialise function");
+        System.out.println("Initialise");
+
+
     }
 
     @After
