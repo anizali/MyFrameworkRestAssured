@@ -2,6 +2,13 @@ package com.qa.pojo;
 
 import java.util.List;
 
+/**
+ * GetForcast class is to save the json object for Forcast api Response
+ *
+ * created by Aniz
+ * date 3/18/2021
+ */
+
 public class GetForcast {
 
     private List<Data> data;
