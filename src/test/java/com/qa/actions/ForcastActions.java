@@ -31,10 +31,15 @@ public class ForcastActions {
         RequestSpecification request;
         request = RestAssured.given();
         date = new ArrayList<>();
-        gf = request.queryParam("key", Constants.WEATHER_API_KEY)
+        response = request.queryParam("key", Constants.WEATHER_API_KEY)
                 .queryParam("postal_code", postCode)
-                .get().as(GetForcast.class);
+                .get();
+        gf = response.as(GetForcast.class);
         System.out.println("Time Zone - " + gf.getTimezone());
+    }
+
+    public static int getStatusCode(){
+        return response.then().extract().statusCode();
     }
 
     public static void getAllDatesForTemperatureRange(Float minTemp, Float maxTemp) {

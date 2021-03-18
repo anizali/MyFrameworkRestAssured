@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 
 public class ForeCastStep {
@@ -12,6 +13,7 @@ public class ForeCastStep {
     @Given("^I look up for the weather forecast for next 16 days with postal code \"([^\"]*)\"$")
     public void theUserSentsGETRequestAndGetTheTimestampAndWeatherValue(String postCode) {
         ForcastActions.requestForecastWithGet(postCode);
+        Assert.assertEquals("Verify status code of request",200 , ForcastActions.getStatusCode());
     }
 
 
