@@ -38,4 +38,11 @@ public class ForeCastStep {
     public void validateResponseHasStatusCode() {
         System.out.println("Setting Api key");
     }
+
+    @And("^I check the temperature is between \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void iCheckTheTemperatureIsBetweenAnd(Float minTemp, Float maxTemp) {
+
+        ForcastActions.getAllDatesForTemperatureRange(minTemp, maxTemp);
+        System.out.println("Minimum and maximum");
+    }
 }
