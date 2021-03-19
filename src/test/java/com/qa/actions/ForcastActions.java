@@ -31,11 +31,10 @@ public class ForcastActions {
         RequestSpecification request;
         request = RestAssured.given();
         date = new ArrayList<>();
-        response = request.queryParam("key", Constants.WEATHER_API_KEY)
+        response = request.log().all().queryParam("key", Constants.WEATHER_API_KEY)
                 .queryParam("postal_code", postCode)
                 .get();
         gf = response.as(GetForcast.class);
-        System.out.println("Time Zone - " + gf.getTimezone());
     }
 
     public static int getStatusCode(){

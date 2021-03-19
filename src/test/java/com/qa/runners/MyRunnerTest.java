@@ -11,7 +11,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
         plugin = {"pretty",
                 "html:target/cucumber",
                 "summary",
-                "de.monochromata.cucumber.report.PrettyReports:target/cucumber-html-reports"}
+                "de.monochromata.cucumber.report.PrettyReports:target"}
         ,features = {"src/test/resources"}
         ,glue = {"com.qa.stepdef"}
         ,snippets = CAMELCASE

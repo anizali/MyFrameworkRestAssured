@@ -17,7 +17,7 @@ This Project is to automate Weather API using RestAssured
 
 
 ## View HTML Report
-* HTML report will be generated once execution finish \target\cucumber-html-reports\cucumber-html-reports
+* HTML report will be generated once execution finish \target\cucumber-html-reports
 * Open overview-features.html
 
 #Test Report screenshots
